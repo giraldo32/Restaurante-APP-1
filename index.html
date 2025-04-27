@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurantes App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Restaurantes App</h1>
+  <nav>
+    <a href="#" onclick="showSection('home')">Inicio</a>
+    <a href="#" onclick="showSection('search')">Buscar</a>
+    <a href="#" onclick="showSection('new')">Nuevo Restaurante</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Sección Inicio -->
+  <section id="home" class="section active">
+    <h2>Lista de Restaurantes</h2>
+    <div id="restaurants-list"></div>
+  </section>
+
+  <!-- Sección Buscar -->
+  <section id="search" class="section">
+    <h2>Buscar Restaurante</h2>
+    <input type="text" id="searchInput" placeholder="Escribe el nombre">
+    <button onclick="searchRestaurant()">Buscar</button>
+    <div id="searchResults"></div>
+  </section>
+
+  <!-- Sección Nuevo Restaurante -->
+  <section id="new" class="section">
+    <h2>Agregar Nuevo Restaurante</h2>
+    <form id="newRestaurantForm" onsubmit="addRestaurant(event)">
+      <input type="text" id="name" placeholder="Nombre" required>
+      <textarea id="description" placeholder="Descripción" required></textarea>
+      <input type="text" id="address" placeholder="Dirección" required>
+      <input type="text" id="image" placeholder="URL de imagen" required>
+      <button type="submit">Agregar Restaurante</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Restaurantes App</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
