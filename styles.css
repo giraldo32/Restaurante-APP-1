@@ -5,10 +5,11 @@ body {
   }
   
   header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #000000;
+    color: mediumslateblue;
     padding: 1em;
     text-align: center;
+    font-family: italic;
   }
   
   nav a {
@@ -16,6 +17,16 @@ body {
     margin: 0 1em;
     text-decoration: none;
     font-weight: bold;
+    z-index: 10;
+  }
+
+
+  nav a:hover {
+    color: mediumslateblue;
+    z-index: 10;
+    position: relative;
+    transform: translateY(-5px);
+    
   }
   
   main {
@@ -31,15 +42,24 @@ body {
   }
   
   .restaurant-card {
-    border: 1px solid #ccc;
-    margin-bottom: 1em;
+    border: 1px solid black;
+    margin-bottom: 6em;
     padding: 1em;
+  }
+
+  #restaurants-list {
+    display: flex;        
+    flex-wrap: wrap;      
+    gap: 20px;            
+    justify-content: center; 
   }
   
   .restaurant-card img {
     width: 100%;
     max-width: 300px;
     height: auto;
+    display: flex;
+    gap: 10px;
   }
   
   input, textarea {
@@ -50,8 +70,8 @@ body {
   }
   
   button {
-    background-color: #4CAF50;
-    color: white;
+    background-color:mediumslateblue ;
+    color: black;
     border: none;
     padding: 0.7em 1.5em;
     cursor: pointer;
@@ -64,3 +84,23 @@ body {
     padding: 1em;
     background-color: #f2f2f2;
   }
+
+  .restaurant-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  
+nav a {
+position: relative;
+display: inline-block;       
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+z-index: 0;                  
+}
+  
+  
+nav a:hover {
+transform: translateY(-4px) scale(1.05);  
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+z-index: 10;                              
+}
